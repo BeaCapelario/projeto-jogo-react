@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+/* Paleta de cores base*/
+  --bg: #0d0b14; 
+  --bg2: #1a1625; 
+  --primary: #d4af37;
+  --secundary: #5e35b1; 
+  --accent: #a3ff12;
+
+  --text: #e0e0e0;
+  --light-text: #9a8c98;
+  --focus: #ff00ff;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Cores dos dormitórios */
+  --heartslabyul: #e63946; 
+  --savanaclaw: #f4a261;   
+  --octavinelle: #a2d2ff; 
+  --scarabia: #9d0208;     
+  --pomefiore: #6a0dad;   
+  --ignihyde: #00d4ff;   
+  --diasomnia: #2d6a4f;    
+
+  /* Estados de Gameplay */
+  --success: #2ecc71; 
+  --danger: #e74c3c; 
+  --blot-ink: #1e0030;  
+  --magic-aura: rgba(163, 255, 18, 0.3); 
+
+  /* Tipografia */
+  --title-font: 'Cinzel', serif;
+  --text-font: 'Montserrat', sans-serif;
+
+  /* Estrutura */
+  --border: 1px solid rgba(212, 175, 55, 0.3);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
