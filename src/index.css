@@ -1,40 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-/* Paleta de cores base*/
-  --bg: #0d0b14; 
-  --bg2: #1a1625; 
-  --primary: #d4af37;
-  --secundary: #5e35b1; 
-  --accent: #a3ff12;
+  /*Cores base*/
+  --bg: #08070b; 
+  --bg2: #14111d; 
+  --primary: #c5a059; 
+  --secundary: #482a85; 
+  --accent: #9dfd49; 
 
-  --text: #e0e0e0;
-  --light-text: #9a8c98;
-  --focus: #ff00ff;
+  --text: #f0f0f5; 
+  --light-text: #8b89a1; 
+  --focus: #d800a6; 
 
   --white: #ffffff;
   --black: #000000;
 
-  /* Cores dos dormitórios */
-  --heartslabyul: #e63946; 
-  --savanaclaw: #f4a261;   
-  --octavinelle: #a2d2ff; 
-  --scarabia: #9d0208;     
-  --pomefiore: #6a0dad;   
-  --ignihyde: #00d4ff;   
-  --diasomnia: #2d6a4f;    
+/*Cores por dormitório*/
+  --heartslabyul: #b91d1d; 
+  --savanaclaw:   #d97706; 
+  --octavinelle:  #7dd3fc; 
+  --scarabia:     #7f1d1d; 
+  --pomefiore:    #7c3aed; 
+  --ignihyde:     #0ea5e9; 
+  --diasomnia:    #065f46; 
 
   /* Estados de Gameplay */
-  --success: #2ecc71; 
-  --danger: #e74c3c; 
-  --blot-ink: #1e0030;  
-  --magic-aura: rgba(163, 255, 18, 0.3); 
+  --success: #10b981; 
+  --danger: #ef4444; 
+  --blot-ink: #11001c;  
+  --magic-aura: #9dfd4940; 
 
-  /* Tipografia */
+  /* Fontes / Tipografia */
   --title-font: 'Cinzel', serif;
   --text-font: 'Montserrat', sans-serif;
 
-  /* Estrutura */
-  --border: 1px solid rgba(212, 175, 55, 0.3);
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  /* Estrutura*/
+  --border: 1px solid rgba(197, 160, 89, 0.2);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
 }
