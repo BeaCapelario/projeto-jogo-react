@@ -1,10 +1,9 @@
-import Mapinha from "./components/Mapinha";
+import Fases from "./components/Fases.jsx"
 
-export default function App(){
+export default function App() {
 
-return(
-
-  <Mapinha />
-)
-
+     return(
+          <Fases />
+     )
+     
 }
