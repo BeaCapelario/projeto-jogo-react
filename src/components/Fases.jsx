@@ -39,12 +39,12 @@ export default function Fases() {
   return (
     <main className="questoes">
       <header className="q-header">
-        <h1 className="q-title">Twisted Mange~ </h1>
+        <h1 className="q-title">CODEX: HORIZONTE ROSA</h1>
         <p className="q-subtitle">Toque no ícone para abrir a pergunta</p>
 
         <div className="progress">
           <div
-            className="progresso-bar"
+            className="progress-bar"
             role="progressbar"
             aria-valuemin={0}
             aria-valuemax={100}

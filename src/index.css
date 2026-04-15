@@ -1,40 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata:wght@200..900&display=swap');
 
 :root {
-  /*Cores base*/
-  --bg: #08070b; 
-  --bg2: #14111d; 
-  --primary: #c5a059; 
-  --secundary: #482a85; 
-  --accent: #9dfd49; 
+    --bg: #1a1625;
+    --bg2: #2d263d;
+    --text: #e0d7ff;
 
-  --text: #f0f0f5; 
-  --light-text: #8b89a1; 
-  --focus: #d800a6; 
+    --primary: #a388ee;
+    --primary-claro: #c6b5ff;
+    --primary-escuro: #7359c4;
+    --primary-text: #ffffff;
 
-  --white: #ffffff;
-  --black: #000000;
+    --secundary: #ff8ab4;
+    --secundary-claro: #ffb3d1;
+    --secundary-escuro: #d45d8a;
+    --secundary-text: #1a1625;
 
-/*Cores por dormitório*/
-  --heartslabyul: #b91d1d; 
-  --savanaclaw:   #d97706; 
-  --octavinelle:  #7dd3fc; 
-  --scarabia:     #7f1d1d; 
-  --pomefiore:    #7c3aed; 
-  --ignihyde:     #0ea5e9; 
-  --diasomnia:    #065f46; 
+    --ring: #ffcc4d;
+    --border: 2px solid #4a3f63;
+    --border2: 2px solid #d5caf3;
+    --border3: 2px solid #ff8ab4;
 
-  /* Estados de Gameplay */
-  --success: #10b981; 
-  --danger: #ef4444; 
-  --blot-ink: #11001c;  
-  --magic-aura: #9dfd4940; 
+    --accent: #ffcc4d;
+    --accent-bg: #4a3b10;
+    --accent-text: #ffcc4d;
 
-  /* Fontes / Tipografia */
-  --title-font: 'Cinzel', serif;
-  --text-font: 'Montserrat', sans-serif;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --hover-shadow: 0 0 15px rgba(163, 136, 238, 0.6);
+    --accent-shadow: 0 0 20px rgba(255, 204, 77, 0.4);
 
-  /* Estrutura*/
-  --border: 1px solid rgba(197, 160, 89, 0.2);
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
+    --locked: #4b4b4b;
+    --solved-border: #63e6be;
+    --solved-bg: #102e26;
+
+    --white: #ffffff;
+    --black: #000000;
+    --error: #ff5555;
+    --success: #63e6be;
+
+    --font-titulo: 'DotGothic16', sans-serif;
+    --font-texto: 'Inconsolata', monospace;
+}
+
+body {
+    font-family: var(--font-texto);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-titulo);
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
 }
