@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import QUESTOES from "../../public/data/perguntas.json";
 import "./fases.css";
 import IconGrid from "./IconGrid";
+import QuestionDialog from "./QuestionDialog";
 
 export default function Fases() {
   const [selecionada, setSelecionada] = useState(null);
@@ -60,14 +61,23 @@ export default function Fases() {
           </span>
         </div>
       </header>
-      <IconGrid 
-      questoes = {QUESTOES}
-      onOpen = {handleOpen}
-      modalOpne = {Boolean(selecionada)}
-      trancada = {trancada}
-      resolvidas = {resolvidas}
-      
+      <IconGrid
+        questoes={QUESTOES}
+        onOpen={handleOpen}
+        modalOpne={Boolean(selecionada)}
+        trancada={trancada}
+        resolvidas={resolvidas}
       />
+
+      {selecionada && (
+        <QuestionDialog
+          questoes={selecionada}
+          index={QUESTOES.findIndex((q) => q.id === selecionada.id)}
+          total={total}
+          onClose={handleClose}
+          onCorrect={handleCorrect}
+        />
+      )}
     </main>
   );
 }

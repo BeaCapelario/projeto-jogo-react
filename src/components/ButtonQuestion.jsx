@@ -21,8 +21,8 @@ export default function ButtonQuestion({
       <button
         type="button"
         className={`icon-button 
-            ${bloqueada ?? "icon-button--locked"} 
-            ${solu ?? "icon-button--solved"}`}
+            ${bloqueada ? " icon-button--locked" : ""} 
+            ${solu ? "icon-button--solved" : ""}`}
         aria-haspopup="dialog"
         aria-controls={queID}
         aria-label={aria}
