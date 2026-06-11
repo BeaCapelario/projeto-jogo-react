@@ -11,8 +11,8 @@ export default function Fases() {
 
   const total = QUESTOES.length;
 
-  const handleOpen = (q) => selecionada(q);
-  const handleClose = () => selecionada(null);
+  const handleOpen = (q) => setSelecionada(q);
+  const handleClose = () => setSelecionada(null);
 
   const handleCorrect = (id) => {
     setResolvidas((prev) => {
@@ -20,23 +20,23 @@ export default function Fases() {
       next.add(id);
       return next;
     });
+
     const idx = QUESTOES.findIndex((q) => q.id === id);
-    if (idx > -1 && idx < QUESTOES.length - 1) {
+    if (idx > -1 && idx < total - 1) {
       setTrancada((prev) => Math.max(prev, idx + 1));
     }
   };
 
   const progresso = useMemo(() => {
     const perguntasResolvidas = resolvidas.size;
-
-    const porcentagem = Math.round((perguntasResolvidas / total) * 100);
+    const porcentagem = total > 0 ? Math.round((perguntasResolvidas / total) * 100) : 0;
 
     return {
       resolvida: perguntasResolvidas,
-      total: total,
-      porcentagem: porcentagem,
+      total,
+      porcentagem,
     };
-  }, [resolvidas, total]);
+  }, [resolvidas]);
 
   return (
     <main className="questoes">
@@ -51,20 +51,19 @@ export default function Fases() {
             aria-valuemin={0}
             aria-valuemax={100}
             aria-valuenow={progresso.porcentagem}
-            aria-label={`Progresso: ${progresso.resolvida} de 
-            ${progresso.total} resolvidas`}
+            aria-label={`Progresso: ${progresso.resolvida} de ${progresso.total} resolvidas`}
             style={{ width: `${progresso.porcentagem}%` }}
           />
-
           <span className="progress-label">
-            {progresso.resolvida} /{progresso.total}
+            {progresso.resolvida} / {progresso.total}
           </span>
         </div>
       </header>
+
       <IconGrid
         questoes={QUESTOES}
         onOpen={handleOpen}
-        modalOpne={Boolean(selecionada)}
+        modalOpen={Boolean(selecionada)} 
         trancada={trancada}
         resolvidas={resolvidas}
       />

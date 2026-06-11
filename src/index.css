@@ -1,72 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata:wght@200..900&display=swap');
 
-:root {
-    --bg: #1a1625;
-    --bg2: #2d263d;
-    --text: #e0d7ff;
-
-    --primary: #a388ee;
-    --primary-claro: #c6b5ff;
-    --primary-escuro: #7359c4;
-    --primary-text: #ffffff;
-
-    --secundary: #ff8ab4;
-    --secundary-claro: #ffb3d1;
-    --secundary-escuro: #d45d8a;
-    --secundary-text: #1a1625;
-
-    --ring: #ffcc4d;
-    --border: 2px solid #4a3f63;
-    --border2: 2px solid #d5caf3;
-    --border3: 2px solid #ff8ab4;
-
-    --accent: #ffcc4d;
-    --accent-bg: #4a3b10;
-    --accent-text: #ffcc4d;
-
-    --shadow: rgba(0, 0, 0, 0.4);
-    --hover-shadow: 0 0 15px rgba(163, 136, 238, 0.6);
-    --accent-shadow: 0 0 20px rgba(255, 204, 77, 0.4);
-
-    --locked: #4b4b4b;
-    --solved-border: #63e6be;
-    --solved-bg: #102e26;
-
-    --white: #ffffff;
-    --black: #000000;
-    --error: #ff5555;
-    --success: #63e6be;
-
-    --font-titulo: 'DotGothic16', sans-serif;
-    --font-texto: 'Inconsolata', monospace;
+/* 1. Reset Global e Estrutura do App (Chaves corrigidas aqui) */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1625; 
+  color: #e0d7ff;
+  overflow: hidden;
 }
 
-body {
-    font-family: var(--font-texto);
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.5;
-}
-
-h1,
-h2,
-h3 {
-    font-family: var(--font-titulo);
-    font-weight: 400;
-    font-style: normal;
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Variáveis de Ambiente Cyberpunk */
+:root {
+  --bg: #1a1625;
+  --bg2: #2d263d;
+  --text: #e0d7ff;
+
+  --primary: #a388ee;
+  --primary-claro: #c6b5ff;
+  --primary-escuro: #7359c4;
+  --primary-text: #ffffff;
+
+  --secundary: #ff8ab4;
+  --secundary-claro: #ffb3d1;
+  --secundary-escuro: #d45d8a;
+  --secundary-text: #1a1625;
+
+  --ring: #ffcc4d;
+  --border: 2px solid #4a3f63;
+  --border2: 2px solid #d5caf3;
+  --border3: 2px solid #ff8ab4;
+
+  --accent: #ffcc4d;
+  --accent-bg: #4a3b10;
+  --accent-text: #ffcc4d;
+
+  --shadow: rgba(0, 0, 0, 0.4);
+  --hover-shadow: 0 0 15px rgba(163, 136, 238, 0.6);
+  --accent-shadow: 0 0 20px rgba(255, 204, 77, 0.4);
+
+  --locked: #4b4b4b;
+  --solved-border: #63e6be;
+  --solved-bg: #102e26;
+
+  --white: #ffffff;
+  --black: #000000;
+  --error: #ff5555;
+  --success: #63e6be;
+
+  --font-titulo: 'DotGothic16', sans-serif;
+  --font-texto: 'Inconsolata', monospace;
+}
+
+/* 3. Tipografia e Estilos Base */
+body {
+  font-family: var(--font-texto);
+  font-optical-sizing: auto;
+  font-weight: 400; /* Corrigido de "weight" para 400 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titulo);
+  font-weight: 400;
+  font-style: normal;
 }
 
 :focus-visible {
-    outline: 3px solid var(--ring);
-    outline-offset: 2px;
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
 }

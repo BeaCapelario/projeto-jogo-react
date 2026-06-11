@@ -1,0 +1,39 @@
+.final-enigma {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.terminal-form {
+  margin-top: 1.5rem;
+}
+
+.terminal-input {
+  background: #0d0a14 !important;
+  border: 2px solid var(--primary-escuro) !important;
+  color: var(--accent) !important;
+  font-family: monospace;
+  padding: 12px !important;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.terminal-input:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 15px rgba(255, 138, 180, 0.4) !important;
+}
+
+.shake-error {
+  animation: k-shake 0.4s ease-in-out;
+  border-color: var(--error) !important;
+  box-shadow: 0 0 15px rgba(255, 85, 85, 0.5) !important;
+  color: var(--error) !important;
+}
+
+@keyframes k-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}

@@ -1,0 +1,10 @@
+.terminal-cursor {
+  font-weight: bold;
+  color: var(--accent);
+  animation: piscar-cursor 0.8s infinite;
+}
+
+@keyframes piscar-cursor {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
